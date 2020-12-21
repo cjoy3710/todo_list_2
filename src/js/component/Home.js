@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-
-import { List } from "./List";
 
 export function Home() {
 	const [newTodo, setNewTodo] = useState("");
 	const [todos, setTodos] = useState([]);
-
-	if (todos === []) {
-		<p>There are no todos. Add new todo.</p>;
-	}
 
 	///delete todo
 	function removeTodo(id) {
@@ -62,34 +55,3 @@ export function Home() {
 		</div>
 	);
 }
-
-// <header className="header">
-// 			<h2>Todos</h2>
-// 			<div className="wrapper">
-// 				<div className="input-wrapper">
-// 					<input
-// 						placeholder="Add todo"
-// 						value={currentItem}
-// 						onChange={onChangeHandler}
-// 					/>
-// 					<button
-// 						type="button"
-// 						className="btn btn-info add-btn"
-// 						onClick={addItemToList}>
-// 						Add todo
-// 					</button>
-// 				</div>
-// 				<List todoList={todoList} updateTodoList={updateTodoList} />
-// 			</div>
-// 		</header>
-// const [todoList, updateTodoList] = useState([]);
-
-// const onChangeHandler = e => {
-// 	e.preventDefault();
-// 	setCurrentItem(e.target.value);
-// };
-
-// const addItemToList = () => {
-// 	updateTodoList([...todoList, { item: currentItem, key: Date.now }]);
-// 	setCurrentItem("");
-// };
